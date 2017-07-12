@@ -3,6 +3,7 @@ package turma_android.com.br.appbanco;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ListView;
 
 import java.util.List;
 
@@ -16,13 +17,20 @@ public class MainActivity extends AppCompatActivity {
 
         repositorio = new Repositorio(this);
 
+        ListView listView = (ListView)
+                                findViewById(R.id.listagemPessoa);
+
+        PessoaAdapter adapter = new PessoaAdapter(this,
+                                        repositorio.listar());
+
+        listView.setAdapter(adapter);
+        /*
         Pessoa p = new Pessoa();
         p.setNome("Maria da Silva");
         p.setEmail("maria@maria.com.br");
-
         repositorio.salvarPessoa(p);
-
         listar();
+        */
     }
 
     private void listar() {
