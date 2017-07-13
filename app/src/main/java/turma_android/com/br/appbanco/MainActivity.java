@@ -17,20 +17,11 @@ public class MainActivity extends AppCompatActivity {
 
         repositorio = new Repositorio(this);
 
-        ListView listView = (ListView)
-                                findViewById(R.id.listagemPessoa);
+        ListView listView = (ListView) findViewById(R.id.listagemPessoa);
 
-        PessoaAdapter adapter = new PessoaAdapter(this,
-                                        repositorio.listar());
+        PessoaAdapter adapter = new PessoaAdapter(this, repositorio.listar());
 
         listView.setAdapter(adapter);
-        /*
-        Pessoa p = new Pessoa();
-        p.setNome("Maria da Silva");
-        p.setEmail("maria@maria.com.br");
-        repositorio.salvarPessoa(p);
-        listar();
-        */
     }
 
     private void listar() {

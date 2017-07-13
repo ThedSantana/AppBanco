@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="turma_android.com.br.appbanco.MainActivity">
 
 
     <ListView
+        android:layout_weight="2"
         android:id="@+id/listagemPessoa"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp">
     </ListView>
 
+    <android.support.design.widget.FloatingActionButton
+        app:fabSize="mini"
+        android:src="@android:drawable/ic_menu_add"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
