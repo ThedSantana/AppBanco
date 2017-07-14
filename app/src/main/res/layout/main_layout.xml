@@ -16,6 +16,7 @@
     </ListView>
 
     <android.support.design.widget.FloatingActionButton
+        android:onClick="criarNovaPessoa"
         app:fabSize="mini"
         android:src="@android:drawable/ic_menu_add"
         android:layout_gravity="bottom|right"
